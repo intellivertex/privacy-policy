@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport" />
+  <meta content="#eef8ff" name="theme-color" />
+  <title>Privacy Policy – IntelliVertex</title>
+  <meta content="Privacy Policy for mobile applications and games published by IntelliVertex." name="description" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #e2f3ff;
+      --surface: #ffffff;
+      --ink: #0c2238;
+      --text: #2b3f55;
+      --muted: #5b7186;
+      --line: #d6e8f5;
+      --sky-50: #eef8ff;
+      --sky-100: #dff1fd;
+      --sky-300: #8fd3fb;
+      --accent: #0b78c4;
+      --accent-strong: #075a95;
+      --glow: #38b6f5;
+      --content: 760px;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --radius: 14px;
+      --gutter: clamp(1rem, 4vw, 2rem);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1rem;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0;
+      min-width: 0;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font: clamp(15.5px, .35vw + 14.6px, 17px)/1.75 var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere
+    }
+
+    a:hover {
+      color: var(--accent-strong)
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px
+    }
+
+    .skip {
+      position: fixed;
+      left: -9999px;
+      top: 1rem;
+      z-index: 1000;
+      background: #fff;
+      color: var(--ink);
+      padding: .65rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 8px
+    }
+
+    .skip:focus {
+      left: max(1rem, env(safe-area-inset-left))
+    }
+
+    /* ---------- Header: everything centered ---------- */
+    header {
+      background:
+        radial-gradient(120% 90% at 50% 0%, var(--sky-100) 0%, rgba(223, 241, 253, 0) 70%),
+        linear-gradient(180deg, var(--sky-50), var(--bg));
+      border-bottom: 1px solid var(--line);
+      padding:
+        max(2.5rem, calc(env(safe-area-inset-top) + 1.5rem)) max(var(--gutter), env(safe-area-inset-right)) clamp(2rem, 5vw, 3rem) max(var(--gutter), env(safe-area-inset-left));
+    }
+
+    header .in {
+      width: min(100%, var(--content));
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .35rem;
+    }
+
+    .logo {
+      width: clamp(72px, 18vw, 92px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #050816;
+      box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--sky-300), 0 10px 28px rgba(56, 182, 245, .35);
+      margin-bottom: .9rem;
+    }
+
+    header .brand {
+      margin: 0;
+      color: var(--accent);
+      font-size: clamp(.95rem, 2.4vw, 1.05rem);
+      font-weight: 700;
+      letter-spacing: .04em
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font: 700 clamp(1.9rem, 6.2vw, 3rem)/1.12 var(--sans);
+      letter-spacing: -.02em;
+      overflow-wrap: anywhere;
+    }
+
+    .contact {
+      margin: .9rem 0 0;
+      padding: .45rem 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.5;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .contact a {
+      color: var(--accent);
+      font-weight: 600
+    }
+
+    /* ---------- Document column ---------- */
+    .wrap {
+      width: min(100%, var(--content));
+      margin: 0 auto;
+      padding:
+        clamp(1.5rem, 4vw, 2.5rem) max(var(--gutter), env(safe-area-inset-right)) clamp(3rem, 8vw, 4.5rem) max(var(--gutter), env(safe-area-inset-left));
+    }
+
+    main {
+      min-width: 0
+    }
+
+    .note {
+      background: var(--sky-50);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--glow);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      color: var(--text);
+      margin: 0 0 2rem;
+    }
+
+    .note strong {
+      color: var(--ink)
+    }
+
+    section {
+      min-width: 0;
+      scroll-margin-top: 1rem;
+      margin: 0 0 .5rem
+    }
+
+    h2 {
+      color: var(--ink);
+      font: 700 clamp(1.2rem, 3.4vw, 1.5rem)/1.3 var(--sans);
+      letter-spacing: -.01em;
+      margin: 2.4rem 0 .75rem;
+      padding: 0 0 .55rem;
+      border-bottom: 2px solid var(--sky-100);
+    }
+
+    section:first-of-type h2 {
+      margin-top: 0
+    }
+
+    h3 {
+      color: #13405f;
+      font-size: 1.02rem;
+      line-height: 1.4;
+      margin: 1.5rem 0 .3rem
+    }
+
+    p {
+      margin: .75rem 0
+    }
+
+    ul,
+    ol {
+      padding-left: 1.35rem;
+      margin: .75rem 0
+    }
+
+    li {
+      margin: .4rem 0;
+      padding-left: .15rem
+    }
+
+    li::marker {
+      color: var(--glow)
+    }
+
+    strong {
+      color: var(--ink);
+      font-weight: 700
+    }
+
+    main>p {
+      margin: 1.25rem 0
+    }
+
+    footer {
+      width: min(100%, var(--content));
+      margin: 0 auto;
+      padding: 1.5rem max(var(--gutter), env(safe-area-inset-right)) max(2rem, env(safe-area-inset-bottom)) max(var(--gutter), env(safe-area-inset-left));
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent)
+    }
+
+    @media (max-width:480px) {
+      .contact {
+        border-radius: 14px
+      }
+
+      .note {
+        padding: .9rem 1rem
+      }
+    }
+
+    @media (min-width:1100px) {
+      :root {
+        --content: 800px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000
+      }
+
+      header {
+        background: #fff;
+        border: 0;
+        padding: 1rem 0
+      }
+
+      .logo {
+        box-shadow: none
+      }
+
+      .wrap {
+        padding: 0 0 2rem
+      }
+
+      .note {
+        background: #fff;
+        border: 1px solid #bbb
+      }
+
+      a {
+        color: inherit
+      }
+
+      footer {
+        border-top: 1px solid #bbb
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="in"><img class="logo" alt="IntelliVertex logo" width="92" height="92"
+        src="logo.png" />
+      <p class="brand">IntelliVertex</p>
+      <h1>Privacy Policy</h1>
+      <p class="contact">Privacy contact: <a href="mailto:intellivertex@gmail.com">intellivertex@gmail.com</a></p>
+    </div>
+  </header>
+  <div class="wrap">
+    <main id="main">
+      <div class="note noprint"><strong>Important:</strong> This Privacy Policy describes IntelliVertex's current
+        general privacy practices. We may update it when our services, applications, or applicable legal requirements
+        change.</div>
+      <section id="intro">
+        <h2>1. Introduction</h2>
+        <p>This Privacy Policy explains how apps published by IntelliVertex ("we", "us") handle information. It is meant
+          to describe our actual practices. Where a feature or service is described as conditional, it applies only when
+          an application uses that feature or service.</p>
+      </section>
+      <section id="scope">
+        <h2>2. Scope</h2>
+        <p>This policy applies to mobile applications and games published by IntelliVertex that link to it. Individual
+          apps may have different features and data practices.</p>
+      </section>
+      <section id="collect">
+        <h2>3. Information We Collect</h2>
+        <p>A category below applies only when the relevant app actually uses it.</p>
+        <h3>A. Information stored locally on the device</h3>
+        <p>Data the app saves on your device, such as settings or progress (see <a href="#local">section 4</a>). Unless
+          an app states otherwise, we do not receive this data.</p>
+        <h3>B. Information collected automatically</h3>
+        <p>Some services built into an app may automatically process technical information such as device model,
+          operating system version, app version, language, IP address, and interaction or diagnostic data. Which of
+          these are processed depends on the services the app uses.</p>
+        <h3>C. Information provided voluntarily</h3>
+        <p>Information you choose to send us, for example by emailing us. <span></span></p>
+        <h3>D. Advertising-related information</h3>
+        <p>Applies only to apps that show ads. See <a href="#ads">section 5</a>.</p>
+        <h3>E. Analytics and crash information</h3>
+        <p>Applies only to apps that use analytics or crash reporting. See <a href="#analytics">sections 7</a> and <a
+            href="#crash">8</a>.</p>
+        <h3>F. Information collected through third-party services</h3>
+        <p>Third-party SDKs and services included in an app may process information under their own policies. See <a
+            href="#third">section 9</a>.</p>
+        <p>Our applications do not currently request access to your device location, camera, microphone, or contacts.
+        </p>
+      </section>
+      <section id="local">
+        <h2>4. Information That May Be Stored Locally</h2>
+        <p>Depending on the app, data stored on your device may include app settings, game progress, scores,
+          achievements, unlocked content, preferences, language selection, audio settings, customization choices, and
+          locally stored identifiers. Not every app stores every item.</p>
+        <p><strong>Local storage versus transmission.</strong> Data stored only on your device stays under your control
+          and is not sent to us or to a server unless the app has a feature that transmits it. Third-party SDKs in an
+          app may separately store their own identifiers or preferences on the device, such as consent choices. An app
+          that sends data to a server or cloud service will describe that processing in this Privacy Policy.</p>
+      </section>
+      <section id="ads">
+        <h2>5. Advertising</h2>
+        <p>Our applications may display advertising, including banner, interstitial, and rewarded advertisements.
+          Advertising is provided through Google AdMob. AdMob and its partners may process information such as device
+          information, IP address, approximate location derived from IP address, advertising identifiers, app
+          interaction information, and diagnostic information. Not all of this information is necessarily collected in
+          every case.</p>
+        <p>Apps that contain ads may use advertising SDKs, such as Google AdMob, to request and display ads, measure ad
+          performance, and help prevent fraud. Advertising SDKs may process information such as device information, IP
+          address, approximate location derived from IP address, advertising identifiers, app interaction information,
+          and diagnostic information. Not all of this is necessarily collected in every case.</p>
+        <p>The exact processing depends on the advertising provider, the app's configuration, your choices, your region,
+          and applicable consent requirements. Ads may be personalized or non-personalized depending on these factors.
+          Apps without ads do not use advertising SDKs.</p>
+      </section>
+      <section id="consent">
+        <h2>6. Consent and Privacy Choices</h2>
+        <p>Our applications use Google's User Messaging Platform (UMP) to manage applicable privacy and consent choices.
+        </p>
+        <p>Where an app uses Google UMP, you may be shown a privacy or consent message depending on your location and
+          applicable requirements. Your selections are used to configure how advertising services handle personal
+          information in that app. A consent choice applies to the purposes it describes; it does not mean you agreed to
+          all data collection or to any processing not described to you.</p>
+        <p>Where the app provides a Privacy Settings option, you may be able to review or change your choices there. You
+          can also reset your device's advertising ID or limit ad personalization in your Android settings.</p>
+      </section>
+      <section id="analytics">
+        <h2>7. Analytics</h2>
+        <p>If an application uses analytics, the analytics service may process usage and diagnostic information such as
+          screens or features used, session information, device and app details, and identifiers, to help us understand
+          how the app is used. Applications that do not use an analytics service do not process information through an
+          analytics service.</p>
+      </section>
+      <section id="crash">
+        <h2>8. Crash Reporting</h2>
+        <p>IntelliVertex does not currently use a dedicated third-party crash-reporting service in its applications. If
+          this changes, this Privacy Policy will be updated as appropriate.</p>
+      </section>
+      <section id="third">
+        <h2>9. Third-Party Services</h2>
+        <p>Only services actually used by our applications apply.</p>
+      </section>
+      <section id="use">
+        <h2>10. How We Use Information</h2>
+        <p>Depending on the app, information is used to: operate the app; save progress and settings; provide features
+          you request; display advertisements; measure app performance; diagnose crashes; improve functionality; prevent
+          abuse and fraud; and comply with legal obligations. A purpose applies only if the app has the related feature.
+        </p>
+      </section>
+      <p>In the future, some applications may offer optional in-app purchases through Google Play Billing or another
+        supported platform. If introduced, the relevant payment processing will be handled by the applicable platform,
+        and this Privacy Policy will be updated as necessary.</p>
+      <section id="share">
+        <h2>11. Data Sharing</h2>
+        <ul>
+          <li><strong>Stored locally:</strong> not shared by us, unless a feature you use transmits it.</li>
+          <li><strong>Third-party service providers:</strong> SDKs included in an app, such as advertising, analytics or
+            crash-reporting services, may receive information as described in section 9. They process it under their own
+            terms and policies.</li>
+          <li><strong>Advertising-related processing:</strong> ad providers and their partners may process information
+            to serve and measure ads, subject to your choices where available.</li>
+          <li><strong>Legal disclosures:</strong> we may disclose information where required by law or to protect
+            rights, safety and security.</li>
+        </ul>
+        <p><strong>IntelliVertex does not sell personal information.</strong></p>
+        <p>We do not claim that no data is shared where third-party SDKs are present. </p>
+      </section>
+      <section id="retention">
+        <h2>12. Data Retention</h2>
+        <p>Retention depends on the data and where it is held. Data stored locally remains until you clear it, reset the
+          app, or uninstall it (subject to Android backup behavior). Data held by third-party services is retained under
+          their policies. <span></span></p>
+      </section>
+      <section id="deletion">
+        <h2>13. Data Deletion</h2>
+        <p>You can remove locally stored app data by clearing the app's storage in Android settings, using any in-app
+          reset option, or uninstalling the app. Some data may remain in device backups managed by your Google account.
+        </p>
+        <p>For data held by third-party services, see their policies or contact us at the address in <a
+            href="#contact">section 20</a> and we will tell you what we can and cannot do. We do not promise server-side
+          deletion for apps with no server or account system.</p>
+      </section>
+      <section id="children">
+        <h2>14. Children's Privacy</h2>
+        <p>Apps intended for children, or that mix audiences, may be subject to additional requirements, including
+          restrictions on advertising and data collection. We will apply any additional requirements that are relevant
+          to an application and its intended audience. If you believe a child has provided personal information to us in
+          a way that is not permitted, contact us and we will review it.</p>
+      </section>
+      <section id="security">
+        <h2>15. Security</h2>
+        <p>We take reasonable measures, appropriate to the app, to protect information, such as using HTTPS for network
+          connections where applicable and relying on Android's app sandboxing for local data. No method of storage or
+          transmission is completely secure, and we cannot guarantee absolute security.</p>
+      </section>
+      <section id="intl">
+        <h2>16. International Data Processing</h2>
+        <p>Third-party services used by an app may process information in countries other than your own. Where an app
+          transfers personal data across borders, relevant safeguards depend on the provider and applicable law.
+          <span></span></p>
+      </section>
+      <section id="rights">
+        <h2>17. Your Privacy Rights</h2>
+        <p>Depending on where you live and the circumstances, you may have rights to access, correct, delete, object to
+          or restrict processing of, and port your personal information, and to withdraw consent where processing relies
+          on it. These rights are not available in all situations. Where we hold no personal information that identifies
+          you, we may be unable to action a request. To make a request, use <a href="#contact">section 20</a>.</p>
+      </section>
+      <section id="regional">
+        <h2>18. Regional Privacy Information</h2>
+        <h3>European Economic Area / United Kingdom</h3>
+        <p>Where GDPR or UK GDPR applies, the controller is IntelliVertex. . You may have the rights in section 17 and
+          the right to complain to your local data protection authority. </p>
+        <h3>California</h3>
+        <p>Where the CCPA/CPRA applies to us, California residents may have rights to know, delete, correct, and to opt
+          out of the sale or sharing of personal information, and not to be discriminated against for exercising them.
+        </p>
+        <h3>Other US states</h3>
+        <p>Some other states provide similar rights, such as access, deletion, correction and opt-out of targeted
+          advertising, subject to thresholds and exemptions that may not apply to us.</p>
+        <h3>Other jurisdictions</h3>
+        <p>Other countries may provide additional rights. We will respond to requests as required by the law that
+          applies to us.</p>
+      </section>
+      <section id="changes">
+        <h2>19. Changes to This Privacy Policy</h2>
+        <p>We may update this policy as our apps or the law change. Where required, we will provide additional notice of
+          material changes, for example by updating this page or in the app.</p>
+      </section>
+      <section id="contact">
+        <h2>20. Contact</h2>
+        <p>IntelliVertex<br />
+          Email: <a href="mailto:intellivertex@gmail.com">intellivertex@gmail.com</a></p>
+      </section>
+    </main>
+  </div>
+  <footer>IntelliVertex · <a href="#main">Back to top</a></footer>
+</body>
+
+</html>
